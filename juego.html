@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./imagenes/logo.png">
+    <title>Juguemos</title>
+</head>
+<body>
+    <noscript>
+        <p>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
+            Su navegador no soporta JavaScript o lo ha deshabilitado. Para ver el contenido de esta página, por favor habilite JavaScript en su navegador</p>
+    </noscript>
+    <nav>
+        <a href="./index.html">
+            <svg>
+                <rect x="45" y="5" rx="5" id="mon1"></rect>
+                <rect x="50" y="10"  rx="5" id="mon2"></rect>
+                <polygon points="55 45 ,95 45,115 62,30 62" id="tec1"></polygon>
+                <polygon points="57 48 ,92 48,104 58,43 58" id="tec2"></polygon>
+            </svg>
+        </a>
+        <ul>
+            <li>
+                <a href="./historia.html" class="itemnav">Historia</a>
+            </li>
+            <li>
+                <a href="./juego.html" class="itemnav">Juguemos</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>JUGUEMOS UN POCO</h1>
+    </header>
+    <main>
+        <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
+        <section class="juego">
+            <div class="cajas">
+                <div id="cajasoltar" class="caja" ondrop="arrojar(event)" ondragover="permitido(event)">
+                    <p class="pjuego">Arrastre y suelte la imagenes aquí</p>
+                </div>
+
+                <div id="cajasoltar2" class="caja" ondrop="arrojar(event)" ondragover="permitido(event)">
+                    <p class="pjuego">Arrastre y suelte la imagenes aquí</p>
+                </div>
+
+                <div id="cajasoltar3" class="caja" ondrop="arrojar(event)" ondragover="permitido(event)">
+                    <p class="pjuego">Arrastre y suelte la imagenes aquí</p>
+                </div>
+            </div>
+            <div id="cajaimagenes">
+                <img ondragstart="arrastre(event)" ondragend="soltado(event)" ondrag="llevando(event)" id="imagen1" src="./imagenes/rompe2.png" alt="imagen-rompecavezas">
+                <img ondragstart="arrastre(event)" ondragend="soltado(event)" ondrag="llevando(event)" id="imagen2" src="./imagenes/Rompe1.png" alt="imagen-rompecavezas">
+                <img ondragstart="arrastre(event)" ondragend="soltado(event)" ondrag="llevando(event)" id="imagen3" src="./imagenes/Rompe3.png" alt="imagen-rompecavezas">
+            </div>
+        </section>
+        <button class="botonesVideo reinicio" onclick="reinicio(event)">Reiniciar</button>
+    </main>
+    <footer>
+        <div id="pie">
+            <img src="./imagenes/logo.png" alt="" class="logo">
+            <p id="h3">PROGRAMACION
+                <br>
+                 E 
+                <br>
+                 HISTORIA</p>
+        </div>
+        <div>
+            <p id="h4">Sitio con fines educativos - Imitado por José A. Silva</p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
